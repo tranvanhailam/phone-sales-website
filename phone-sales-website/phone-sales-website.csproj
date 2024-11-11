@@ -1,0 +1,331 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC96FD41-588A-43AD-972A-4E8944ECA2A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>phone_sales_website</RootNamespace>
+    <AssemblyName>phone-sales-website</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\home-page.css" />
+    <Content Include="assets\css\login.css" />
+    <Content Include="assets\css\page.css" />
+    <Content Include="assets\css\payment-page.css" />
+    <Content Include="assets\css\product-detail.css" />
+    <Content Include="assets\css\product-manager.css" />
+    <Content Include="assets\css\products-page.css" />
+    <Content Include="assets\css\reset.css" />
+    <Content Include="assets\css\responsive-home-page.css" />
+    <Content Include="assets\css\responsive-payment-page.css" />
+    <Content Include="assets\css\responsive-product-detail.css" />
+    <Content Include="assets\css\responsive-products-page.css" />
+    <Content Include="assets\css\shopping-cart.css" />
+    <Content Include="assets\css\sign-up-exam.css" />
+    <Content Include="assets\css\sign-up.css" />
+    <Content Include="assets\icon\arrow-left.svg" />
+    <Content Include="assets\icon\arrow-right.svg" />
+    <Content Include="assets\icon\cameras.svg" />
+    <Content Include="assets\icon\cart-item.svg" />
+    <Content Include="assets\icon\close-toast.svg" />
+    <Content Include="assets\icon\computers.svg" />
+    <Content Include="assets\icon\error-icon.svg" />
+    <Content Include="assets\icon\facebook.svg" />
+    <Content Include="assets\icon\gaming.svg" />
+    <Content Include="assets\icon\headphones.svg" />
+    <Content Include="assets\icon\icon-product-detail\arrow-down.svg" />
+    <Content Include="assets\icon\icon-product-detail\battery-capacity.svg" />
+    <Content Include="assets\icon\icon-product-detail\cpu.svg" />
+    <Content Include="assets\icon\icon-product-detail\delivery.svg" />
+    <Content Include="assets\icon\icon-product-detail\front-camera.svg" />
+    <Content Include="assets\icon\icon-product-detail\guaranteed.svg" />
+    <Content Include="assets\icon\icon-product-detail\main-camera.svg" />
+    <Content Include="assets\icon\icon-product-detail\memory-capacity.svg" />
+    <Content Include="assets\icon\icon-product-detail\screen-size.svg" />
+    <Content Include="assets\icon\icon-product-detail\stock.svg" />
+    <Content Include="assets\icon\icon-product-manager\remove-icon.svg" />
+    <Content Include="assets\icon\icon-product-manager\update-icon.svg" />
+    <Content Include="assets\icon\icon-products-page\arrow-bottom.svg" />
+    <Content Include="assets\icon\icon-products-page\arrow-control-left.svg" />
+    <Content Include="assets\icon\icon-products-page\arrow-control-right.svg" />
+    <Content Include="assets\icon\icon-products-page\arrow-right.svg" />
+    <Content Include="assets\icon\icon-products-page\arrow-top.svg" />
+    <Content Include="assets\icon\icon-products-page\dot-control.svg" />
+    <Content Include="assets\icon\icon-products-page\toggle-filter.svg" />
+    <Content Include="assets\icon\icon-shopping-cart\add.svg" />
+    <Content Include="assets\icon\icon-shopping-cart\remove.svg" />
+    <Content Include="assets\icon\icon-shopping-cart\sub.svg" />
+    <Content Include="assets\icon\instagram.svg" />
+    <Content Include="assets\icon\menu-mobile.svg" />
+    <Content Include="assets\icon\phones.svg" />
+    <Content Include="assets\icon\search.svg" />
+    <Content Include="assets\icon\smart-watches.svg" />
+    <Content Include="assets\icon\success-icon.svg" />
+    <Content Include="assets\icon\tiktok.svg" />
+    <Content Include="assets\icon\twitter.svg" />
+    <Content Include="assets\icon\tym-product-action.svg" />
+    <Content Include="assets\icon\tym-product.svg" />
+    <Content Include="assets\icon\tym.svg" />
+    <Content Include="assets\icon\user.svg" />
+    <Content Include="assets\icon\userSuccess-icon.svg" />
+    <Content Include="assets\icon\warning-icon.svg" />
+    <Content Include="assets\img\apple-airpods-max.png" />
+    <Content Include="assets\img\apple-vision-pro.png" />
+    <Content Include="assets\img\bank-card.png" />
+    <Content Include="assets\img\banner.png" />
+    <Content Include="assets\img\discount-01.png" />
+    <Content Include="assets\img\discount-02.png" />
+    <Content Include="assets\img\discount-03.png" />
+    <Content Include="assets\img\discount-04.png" />
+    <Content Include="assets\img\featured-01.png" />
+    <Content Include="assets\img\featured-02.png" />
+    <Content Include="assets\img\featured-03.png" />
+    <Content Include="assets\img\featured-04.png" />
+    <Content Include="assets\img\img-product-manager\img-2.jpg" />
+    <Content Include="assets\img\img-product-manager\img-1.png" />
+    <Content Include="assets\img\img-products-page\product-01.png" />
+    <Content Include="assets\img\img-products-page\product-02.png" />
+    <Content Include="assets\img\img-products-page\product-03.png" />
+    <Content Include="assets\img\img-products-page\product-04.png" />
+    <Content Include="assets\img\img-products-page\product-05.png" />
+    <Content Include="assets\img\img-products-page\product-06.png" />
+    <Content Include="assets\img\img-products-page\product-07.png" />
+    <Content Include="assets\img\img-products-page\product-08.png" />
+    <Content Include="assets\img\img-products-page\product-09.png" />
+    <Content Include="assets\img\img-shopping-cart\product-1.png" />
+    <Content Include="assets\img\img-shopping-cart\product-2.png" />
+    <Content Include="assets\img\img-shopping-cart\product-3.png" />
+    <Content Include="assets\img\iphone14pro.png" />
+    <Content Include="assets\img\logo-footer.svg" />
+    <Content Include="assets\img\logo.svg" />
+    <Content Include="assets\img\macbook-air.png" />
+    <Content Include="assets\img\play-station.png" />
+    <Content Include="assets\img\product-01.png" />
+    <Content Include="assets\img\product-02.png" />
+    <Content Include="assets\img\product-03.png" />
+    <Content Include="assets\img\product-04.png" />
+    <Content Include="assets\img\product-05.png" />
+    <Content Include="assets\img\product-06.png" />
+    <Content Include="assets\img\product-07.png" />
+    <Content Include="assets\img\product-08.png" />
+    <Content Include="assets\js\home-page.js" />
+    <Content Include="assets\js\login.js" />
+    <Content Include="assets\js\payment-page.js" />
+    <Content Include="assets\js\product-detail.js" />
+    <Content Include="assets\js\product-manager.js" />
+    <Content Include="assets\js\products-page.js" />
+    <Content Include="assets\js\shopping-cart.js" />
+    <Content Include="assets\js\sign-up-exam.js" />
+    <Content Include="assets\js\sign-up.js" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+    <Content Include="login-exam.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="page.aspx" />
+    <Content Include="payment-page.aspx" />
+    <Content Include="product-detail.aspx" />
+    <Content Include="product-manager.aspx" />
+    <Content Include="products-page.aspx" />
+    <Content Include="shopping-cart.aspx" />
+    <Content Include="sign-up-exam.aspx" />
+    <Content Include="sign-up.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="login-exam.aspx.cs">
+      <DependentUpon>login-exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login-exam.aspx.designer.cs">
+      <DependentUpon>login-exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page.aspx.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page.aspx.designer.cs">
+      <DependentUpon>page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment-page.aspx.cs">
+      <DependentUpon>payment-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment-page.aspx.designer.cs">
+      <DependentUpon>payment-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-detail.aspx.cs">
+      <DependentUpon>product-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product-detail.aspx.designer.cs">
+      <DependentUpon>product-detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="ShoppingCartOfUser.cs" />
+    <Compile Include="sign-up-exam.aspx.cs">
+      <DependentUpon>sign-up-exam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sign-up-exam.aspx.designer.cs">
+      <DependentUpon>sign-up-exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product-manager.aspx.cs">
+      <DependentUpon>product-manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product-manager.aspx.designer.cs">
+      <DependentUpon>product-manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="products-page.aspx.cs">
+      <DependentUpon>products-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products-page.aspx.designer.cs">
+      <DependentUpon>products-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="shopping-cart.aspx.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shopping-cart.aspx.designer.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sign-up.aspx.cs">
+      <DependentUpon>sign-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sign-up.aspx.designer.cs">
+      <DependentUpon>sign-up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserExam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49914</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44300/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
